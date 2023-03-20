@@ -19,11 +19,11 @@ parser.add_argument('--target_w',type=int,default=1920,help="size of output imag
 opt = parser.parse_args()
 
 model_stage_1=Generator_S2F_v2()
-model_stage_1.load_state_dict(torch.load('.output/v3/G_S2N_200.pth'))
+model_stage_1.load_state_dict(torch.load('.、output/v3/G_S2N_200.pth'))
 model_stage_1=model_stage_1.eval()
 
 model_stage_2=Generator_S2F_v2()
-model_stage_2.load_state_dict(torch.load('./output/v3/G_N2S_200.pth'))
+model_stage_2.load_state_dict(torch.load('./output/v3/G_S2N2_200.pth'))
 model_stage_2=model_stage_2.eval()
  
 G_mask=Generator_shadow()
